@@ -1,4 +1,4 @@
-MatFinder
+ï»¿MatFinder
 
 Author
 Yunleifu from Tencent SNG production Test-team.
@@ -6,7 +6,7 @@ Yunleifu from Tencent SNG production Test-team.
 Introduction
 This is a plugin for mat or eclipse which already have installed mat plugin.It will be effective to finder the Android memory leak as soon as possible.
 
-Install£º
+How to install
 1.
 2.
 3.
