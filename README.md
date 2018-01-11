@@ -2,7 +2,7 @@
 
 Author
 
-Yunleifu from Tencent SNG production Test-team.
+Yunleifu(234557307@qq.com) from Tencent SNG production Test-team.
 
 Introduction
 
