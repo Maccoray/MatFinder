@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.mat.report.query">
+      <query
+            impl="finder.SameByteQuery">
+      </query>
+      <query
+            impl="finder.ActivityQuery">
+      </query>
+      <query
+            impl="finder.DumpCompareQuery">
+      </query>
+      <query
+            impl="finder.TopClassQuery">
+      </query>
+      <query
+            impl="finder.EnumQuery">
+      </query>
+      <query
+            impl="finder.BitmapQuery">
+      </query>
+      <query
+            impl="finder.AboutQuery">
+      </query>
+      <query
+            impl="finder.cloud.CloudLeafQuery">
+      </query>
+      <query
+            impl="finder.SingletonQuery">
+      </query>
+      <query
+            impl="finder.AllBInOCQuery">
+      </query>
+      <query
+            impl="finder.FragmentsQuery">
+      </query>
+      <query
+            impl="finder.ExportDump2CSV">
+      </query>
+      <query
+            impl="finder.ThreeExecutionThreeDumpQuery">
+      </query>
+      <query
+            impl="finder.cloud.CloudOQLQuery">
+      </query>
+   </extension>
+   <extension
+         point="org.eclipse.mat.report.report">
+      <report
+            file="META-INF/FinderReport.xml"
+            id="FinderReport"
+            name="FinderReport">
+      </report>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+        <category
+            name="Finder Views"
+            id="com.finder.categoryid.views">
+        </category>
+        <view
+            name="Bitmaps View"
+            category="com.finder.categoryid.views"
+            class="finder.BitmapView"
+            id="com.finder.viewid.bitmapview">
+        </view>
+        <view
+            name="Memory rules View"
+            category="com.finder.categoryid.views"
+            class="finder.cloud.CloudRuleEditorView"
+            id="com.finder.viewid.cloudruleeditorview">
+        </view>
+        <view
+              category="com.finder.categoryid.views"
+              class="finder.GCShortcutView"
+              id="com.finder.viewid.gcshortcutview"
+              name="GC Shortcut View">
+        </view>
+   </extension>
+</plugin>

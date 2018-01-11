@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="FinderReport">
+    <query name="Overview">
+		<param key="html.show_table_header" value="false" />
+		<command>heap_dump_overview</command>
+	</query>
+	
+	<query name="Information">
+		<param key="html.separate_file" value="true" />
+		<param key="sort_column" value="#1=ASC" />
+		<param key="hide_column" value="#0" />
+		<param key="limit" value="1000" />
+		<command>system_properties</command>
+	</query>
+
+ 	<query name="Activity Leak">
+		<command>FinderActivity -b Activity</command>
+	</query>
+
+	<query name="Top Count Classes">
+	    <param key="limit" value="100" />
+	    <param key="sort_column" value="#1=DESC" />
+		<command>TopClass</command>
+	</query>
+	
+	<query name="Top memory Classes">
+	    <param key="limit" value="100" />
+        <param key="sort_column" value="#2=DESC" />
+        <command>TopClass</command>
+    </query>
+	
+	<query name="Threads">
+		<param key="limit" value="1000" />
+		<param key="html.separate_file" value="true" />
+		<param key="html.render_details" value="false" />
+		<command>thread_overview</command>
+	</query>
+
+</section>
