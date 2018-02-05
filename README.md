@@ -19,7 +19,7 @@ How to build it
 
 How to install
 
-1.If have no "dropins" folder that make a folder and name "dropins" in your Eclipse home path
+1.If have no "dropins" folder that make a folder and name "dropins" in your Eclipse(or MAT) home path
 
 2.Download /bin/finder_xxxx.jar of this repository
 
@@ -36,4 +36,34 @@ There are two ways to use it.
 Open a hprof file with eclipse or mat,then you will see a toolbar item like
 
 2.CMD console use
+
+If you install matfinder to eclipse,then you must jump to eclipse's plugin folder and run follow cmd.
+...\plugins>java -Dosgi.bundles=org.eclipse.mat.dtfj@4:start,org.eclipse.equinox.common@2:start,org.eclipse.update.configurator@3:start,org.eclipse.core.runtime@start -jar org.eclipse.equinox.launcher_1.3.0.v20140415-2008.jar -consoleLog -application org.eclipse.mat.api.parse "...\xxx.hprof" "...\FinderTask.xml"
+
+If you install matfinder to MAT,then you can run follow cmd in the MAT-Home path directly.
+MemoryAnalyzer -consolelog -application org.eclipse.mat.api.parse "...\xxx.hprof" "...\FinderTask.xml"
+
+...\xxx.hprof:A memory dump file from Android OS for a app.
+
+
+...\FinderTask.xml:A file like follow contents in it(you can use local xml to do it.In project "additional" folder).
+
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="FinderSS">
+	<query name="Overview">
+		<param key="html.show_table_header" value="false"/>
+		<command>
+			heap_dump_overview
+		</command>
+	</query>
+	<query name="Find Cloud Analyze">
+		<command>
+			FindCloudDebug -p .../MemoryRulesConfig.xml  -o .../outputfolder
+		</command>
+	</query>
+</section>
+
+.../MemoryRulesConfig.xml:A memory rule config file is created by MatFinder(see section:How to create memory rule).
+
+.../outputfolder:Output file created by the cmd runing after(see section:What's mean of the outputfiles).
 
